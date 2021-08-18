@@ -2,9 +2,65 @@
 Have the turtle draw a row of houses.
 """
 from tkinter import messagebox, simpledialog, Tk
-
-
+import turtle, random
 if __name__ == '__main__':
+    # I have no clue on how to do this function
+    randnum = random.randint(1, 3)
+    h = ""
+    def draw_house(h):
+        if randnum == 1:
+            Shivam.forward(25)
+            Shivam.penup()
+            Shivam.right(-90)
+            Shivam.pendown()
+            Shivam.color('black')
+            Shivam.forward(60)
+            Shivam.left(90)
+            Shivam.forward(25)
+            Shivam.left(90)
+            Shivam.forward(60)
+            Shivam.left(90)
+        if randnum == 2:
+            Shivam.forward(25)
+            Shivam.penup()
+            Shivam.right(-90)
+            Shivam.pendown()
+            Shivam.color('black')
+            Shivam.forward(120)
+            Shivam.left(90)
+            Shivam.forward(25)
+            Shivam.left(90)
+            Shivam.forward(120)
+            Shivam.left(90)
+        if randnum == 3:
+            Shivam.forward(25)
+            Shivam.penup()
+            Shivam.right(-90)
+            Shivam.pendown()
+            Shivam.color('black')
+            Shivam.forward(250)
+            Shivam.left(90)
+            Shivam.forward(25)
+            Shivam.left(90)
+            Shivam.forward(250)
+            Shivam.left(90)
+
+
+    window = turtle.Screen()
+    window.bgcolor('white')
+    Shivam = turtle.Turtle()
+    Shivam.shape('turtle')
+    Shivam.penup()
+    Shivam.goto(-450,-450)
+
+    Shivam.pendown()
+    for i in range(10):
+        draw_house(randnum)
+        Shivam.color('green')
+        Shivam.forward(50)
+
+
+
     # TODO)
     #   1) Move the turtle to the left side of the window near the bottom.
     #   2) Draw ONE flat-topped house with height=100 and green grass after it.

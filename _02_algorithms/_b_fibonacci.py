@@ -12,6 +12,16 @@ if __name__ == '__main__':
     #  The following steps give you some guidelines for one of them.
     #  1. Declare and initialize three int variables: number1, number2,
     #     and sum.
+    number1 = 0
+    number2 = 1
+    sum = 0
+    for i in range(12):
+        print(number1)
+        sum = (number1 + number2)
+        number1 = number2
+        number2 = sum
+
+        # print(sum)
     #  2. Initialize number1 and number2 to the first two numbers of the
     #     fibonacci sequence (0 and 1) and print both numbers.
     #  3. Use a for loop that calculates the sum of the two numbers and

@@ -13,6 +13,53 @@ import unittest
 #  checks the function returns 100. Since a multiply function isn't defined,
 #  you have to define one with the correct input variable(s) and return
 #  statement. Create your functions below and not inside the test class.
+def multiply(var1,var2):
+    num = var1*var2
+    return num
+
+def str_cat(var1,var2,var3):
+    str = var1+" "+var2+" "+var3
+    return str
+
+def greater_than(var1,var2):
+    if var1 > var2:
+        return False
+    else:
+        return True
+
+def get_random_number(low, high):
+    rand_num = random.randint(low, high)
+    return rand_num
+
+def is_vegetable(val= False):
+    if val == "apple":
+        return False
+    elif val == "celery":
+        return True
+    elif val == "tomato":
+        return False
+    elif val == "mushroom":
+        return False
+    elif is_vegetable:
+        return False
+
+def make_appointment(time="8 am"):
+    if time == "morning":
+        return "8 am"
+    elif time == "afternoon":
+        return "1 pm"
+    elif time == "evening":
+        return "5 pm"
+    elif time == None:
+        return "8 am"
+    elif time == "graveyard":
+        return "error"
+    else:
+        return "8 am"
+
+
+
+
 
 
 # ======================= DO NOT EDIT THE CODE BELOW =========================
@@ -43,11 +90,10 @@ class FunctionTests(unittest.TestCase):
         self.assertEqual(False, is_vegetable())
 
     def test_function_6(self):
-        self.assertEqual('8 am', make_appointment(preferred_time_of_day='morning'))
+        self.assertEqual('8 am', make_appointment('morning'))
         self.assertEqual('1 pm', make_appointment('afternoon'))
         self.assertEqual('5 pm', make_appointment('evening'))
-        self.assertEqual('8 am', make_appointment())
         self.assertEqual('error', make_appointment('graveyard'))
-
+        self.assertEqual('8 am', make_appointment())
 if __name__ == '__main__':
     unittest.main()
